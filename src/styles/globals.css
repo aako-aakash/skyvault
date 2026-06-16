@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-[#F8FAFC] text-gray-800 antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', 'Inter', sans-serif;
+    @apply font-semibold;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-600 rounded;
+  }
+
+  input, select, textarea, button {
+    font-family: inherit;
+  }
+}
+
+@layer components {
+  /* Range Slider */
+  input[type='range'] {
+    @apply w-full h-1.5 rounded-full appearance-none cursor-pointer;
+    background: #E5E7EB;
+  }
+  input[type='range']::-webkit-slider-thumb {
+    @apply appearance-none w-5 h-5 rounded-full bg-brand-600 cursor-pointer;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(31, 78, 121, 0.35);
+  }
+  input[type='range']::-moz-range-thumb {
+    @apply w-5 h-5 rounded-full bg-brand-600 cursor-pointer border-0;
+    border: 3px solid white;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { @apply bg-gray-100 rounded-full; }
+  ::-webkit-scrollbar-thumb { @apply bg-gray-300 rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-gray-400; }
+
+  /* Signature Canvas */
+  .signature-canvas {
+    touch-action: none;
+    cursor: crosshair;
+  }
+}
+
+@layer utilities {
+  .font-heading { font-family: 'Poppins', 'Inter', sans-serif; }
+  .text-gradient {
+    background: linear-gradient(135deg, #1F4E79, #2980B9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+  .scrollbar-none::-webkit-scrollbar { display: none; }
+}
