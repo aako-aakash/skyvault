@@ -87,7 +87,7 @@ const Step3KYC: React.FC<Step3Props> = ({ onNext }) => {
         </Field>
 
         {/* Aadhaar */}
-        <Field label="Aadhaar Number" required hint="12-digit Aadhaar — Verhoeff checksum validated" error={errors.aadhaar?.message || errors.aadhaarVerified?.message}>
+        <Field label="Aadhaar Number" required hint="12-digit Aadhaar — Verhoeff checksum validated · Demo: 2341 2341 2346" error={errors.aadhaar?.message || errors.aadhaarVerified?.message}>
           <div className="flex gap-2 items-end">
             <Controller
               name="aadhaar"

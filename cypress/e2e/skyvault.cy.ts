@@ -24,7 +24,7 @@ const fillKYC = () => {
   cy.get('input[placeholder="ABCDE1234F"]').first().type('ABCDE1234F');
   cy.contains('Verify PAN').click();
   cy.contains('PAN verified', { timeout: 5000 }).should('be.visible');
-  cy.get('input[placeholder="XXXX XXXX XXXX"]').type('234123412341');
+  cy.get('input[placeholder="XXXX XXXX XXXX"]').type('234123412346');
   cy.contains('Verify').click();
   cy.contains('Aadhaar verified', { timeout: 5000 }).should('be.visible');
   // Consent toggle

@@ -204,4 +204,4 @@ aws cloudfront create-invalidation --distribution-id YOUR_ID --paths "/*"
 
 ## 📄 License
 
-MIT © 2025 Aakash Kumar Saw | Skyward Labs
+MIT © 2026 Aakash Kumar Saw | skyward Labs

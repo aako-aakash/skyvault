@@ -14,16 +14,12 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor:  ['react', 'react-dom'],
-          router:  ['react-router-dom'],
           forms:   ['react-hook-form', 'zod', '@hookform/resolvers'],
           motion:  ['framer-motion'],
-          ui:      ['lucide-react', 'clsx', 'tailwind-merge'],
+          ui:      ['lucide-react'],
         },
       },
     },
-    chunkSizeWarningLimit: 600,
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom'],
+    chunkSizeWarningLimit: 800,
   },
 });
